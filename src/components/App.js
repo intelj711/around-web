@@ -3,6 +3,7 @@ import { Header }  from './Header';
 import { Main } from './Main';
 import { TOKEN_KEY } from '../constants';
 import '../styles/App.css';
+
 class App extends React.Component {
     state = {
         isLoggedIn: !!localStorage.getItem(TOKEN_KEY),
