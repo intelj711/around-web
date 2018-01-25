@@ -41,8 +41,11 @@ export class Home extends Component {
         this.getGeoLocation();
     }
     loadNearbyPosts = () => {
-        const { lat, lon } = JSON.parse(localStorage.getItem(POS_KEY));
-        this.setState({ loadingPosts: true });
+        // const { lat, lon } = JSON.parse(localStorage.getItem(POS_KEY));
+        const lat = 37.7915953;
+        const lon = -122.3937977;
+        this.setState({ loadingPosts: true, error: ''});
+
         return $.ajax({
             url: `${API_ROOT}/search?lat=${lat}&lon=${lon}&range=20`,
             method: 'GET',

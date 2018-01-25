@@ -1,9 +1,10 @@
 import React from 'react';
 import $ from 'jquery';
 import { Modal, Button, message } from 'antd';
-import { WrappedCreatePostForm } from './CreatePostForm';
+import { WrappedCreatePostForm } from './CreateButtonForm';
 import { API_ROOT, TOKEN_KEY, AUTH_PREFIX, POS_KEY } from '../constants';
 import { PropTypes } from 'prop-types';
+
 export class CreatePostButton extends React.Component {
     static propTypes = {
         loadNearbyPosts: PropTypes.func.isRequired,
@@ -68,7 +69,7 @@ export class CreatePostButton extends React.Component {
         const { visible, confirmLoading } = this.state;
         return (
             <div>
-                <Button type="primary" onClick={this.showModal}>Create Post Buttongu</Button>
+                <Button type="primary" onClick={this.showModal}>Create Post Button</Button>
                 <Modal
                     title="Create New Post"
                     visible={visible}
