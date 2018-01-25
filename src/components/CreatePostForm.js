@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Input, Icon, Upload } from 'antd';
 const FormItem = Form.Item;
 
-class CreateButtonForm extends React.Component {
+class CreatePostForm extends React.Component {
     beforeUpload = () => {
         return false;
     }
@@ -60,4 +60,4 @@ class CreateButtonForm extends React.Component {
         );
     }
 }
-export const WrappedCreatePostForm = Form.create()(CreateButtonForm);
+export const WrappedCreatePostForm = Form.create()(CreatePostForm);
